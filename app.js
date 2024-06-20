@@ -14,3 +14,6 @@ multiply: *
 divide: /
 remainder: %
 */
+console.log('four' + 'words' + 'added' + 'together');
+// concatenation is done when you have to add things together
+// and apparently spaces should not be ignored
