@@ -23,3 +23,6 @@ console.log('    Remove whitespace   '.trim());
 //these <.command> are called methods
 console.log('Codecademy'.toUpperCase());
 //specific methods have specific commands
+console.log(Math.floor(Math.random() * 100));
+console.log(Math.ceil(43.8));
+console.log(Number.isInteger(2017));
