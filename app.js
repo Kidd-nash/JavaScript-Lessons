@@ -19,3 +19,7 @@ console.log('four' + 'words' + 'added' + 'together');
 // and apparently spaces should not be ignored
 console.log('Counting the string input' .length);
 //this <.length> a property used to count the number of characters in a String
+console.log('    Remove whitespace   '.trim());
+//these <.command> are called methods
+console.log('Codecademy'.toUpperCase());
+//specific methods have specific commands
