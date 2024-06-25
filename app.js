@@ -41,3 +41,20 @@ console.log(gundamAnalysis);
 //const are constants an when reassigned will be a TypeError
 gundamAnalysis = 'it is good';
 //and when you do not put any value, it will read as SyntaxError
+let levelUp = 10;
+levelUp += 5;
+
+console.log(levelUp);
+let powerLevel = 9001;
+powerLevel -= 100;
+
+console.log(powerLevel);
+let multiplyMe = 32;
+multiplyMe *= 11;
+
+console.log(multiplyMe);
+let quarterMe = 1152;
+quarterMe /= 4;
+
+console.log(quarterMe);
+//these are Mathematical Operators
