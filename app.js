@@ -68,3 +68,7 @@ console.log(lostDollar);
 //the next one is to concatenate a string with a variable
 let favoriteAnimal = 'Kuma';
 console.log('My favorite animal: ' + favoriteAnimal);
+//this one joins together var and string thru interpolation
+var myName = 'Eric';
+var myCity = 'Nuuk';
+console.log(`My name is ${myName}. My favorite city is ${myCity}`);
