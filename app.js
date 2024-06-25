@@ -35,3 +35,9 @@ console.log(numOfGundamWings);
 
 let areGundamsGood = Yes;
 console.log(areGundamsGood);
+
+const gundamAnalysis = 'REALLY GOOD';
+console.log(gundamAnalysis);
+//const are constants an when reassigned will be a TypeError
+gundamAnalysis = 'it is good';
+//and when you do not put any value, it will read as SyntaxError
