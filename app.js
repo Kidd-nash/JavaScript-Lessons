@@ -72,3 +72,10 @@ console.log('My favorite animal: ' + favoriteAnimal);
 var myName = 'Eric';
 var myCity = 'Nuuk';
 console.log(`My name is ${myName}. My favorite city is ${myCity}`);
+//typeof operator, tells what type of data is the variables
+let newVariable = 'Playing around with typeof.';
+console.log(typeof newVariable);
+newVariable = 1;
+console.log(typeof newVariable);
+let anotherVariable = true;
+console.log(typeof anotherVariable);
