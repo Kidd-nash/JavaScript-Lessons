@@ -32,3 +32,6 @@ console.log(bestGundam):
 //pb
 var numOfGundamWings = 2;
 console.log(numOfGundamWings);
+
+let areGundamsGood = Yes;
+console.log(areGundamsGood);
