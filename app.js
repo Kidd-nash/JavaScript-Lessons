@@ -65,3 +65,6 @@ console.log(gainedDollar);
 let lostDollar = 50;
 lostDollar--;
 console.log(lostDollar);
+//the next one is to concatenate a string with a variable
+let favoriteAnimal = 'Kuma';
+console.log('My favorite animal: ' + favoriteAnimal);
