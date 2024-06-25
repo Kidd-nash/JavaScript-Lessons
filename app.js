@@ -58,3 +58,10 @@ quarterMe /= 4;
 
 console.log(quarterMe);
 //these are Mathematical Operators
+//these next two are called increments and decrements Operators
+let gainedDollar = 3;
+gainedDollar++;
+console.log(gainedDollar);
+let lostDollar = 50;
+lostDollar--;
+console.log(lostDollar);
