@@ -79,3 +79,14 @@ newVariable = 1;
 console.log(typeof newVariable);
 let anotherVariable = true;
 console.log(typeof anotherVariable);
+//next one is a short activity applying the lessons learned so far
+//293 is the forecasted weather and is set to be the constant value
+const kelvin = '293';
+//celsius has a 273 diff in kelvin
+var celsius = '20';
+//to get fahrenheit celsius * (9/5) + 32
+var fahrenheit = '33.8';
+//to remove decimals, simply use a Math object
+fahrenheit = Math.floor(fahrenheit);
+//to print out use interpolation
+console.log(`The temperature is ${fahrenheit} degrees in Fahrenheit`);
