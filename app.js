@@ -90,3 +90,21 @@ var fahrenheit = '33.8';
 fahrenheit = Math.floor(fahrenheit);
 //to print out use interpolation
 console.log(`The temperature is ${fahrenheit} degrees in Fahrenheit`);
+//end of temp project
+
+//start of Dog years project
+var myAge = 23;
+var earlyYears = 2;
+//value for earlyYears will change
+earlyYears *= 10.5;
+var laterYears = 23 - 2;
+//laterYears is calculated thru subtracting 2 from myAge
+laterYears *= 4;
+console.log(earlyYears);
+console.log(laterYears);
+let myAgeInDogYears = earlyYears + laterYears;
+//myAgeInDogYears is the sum of earlyYears and laterYears
+var myName = 'KIDO'.toLowerCase();
+//this code turns the name to LowerCase
+console.log(`My name is ${myName}. I am ${myAge} years old in human years
+  which is ${myAgeInDogYears} years old in dog years.`)
