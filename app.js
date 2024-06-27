@@ -108,3 +108,14 @@ var myName = 'KIDO'.toLowerCase();
 //this code turns the name to LowerCase
 console.log(`My name is ${myName}. I am ${myAge} years old in human years
   which is ${myAgeInDogYears} years old in dog years.`)
+
+//next is if else and more
+let Gundam_sale = true;
+
+Gundam_sale = false;
+
+if(Gundam_sale) {
+  console.log('Time to buy!');
+} else {
+  console.log('Time to wait for a sale.');
+}
