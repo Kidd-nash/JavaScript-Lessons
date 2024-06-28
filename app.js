@@ -119,3 +119,18 @@ if(Gundam_sale) {
 } else {
   console.log('Time to wait for a sale.');
 }
+//comparison Operators
+/*
+Less than: <
+Greater than: >
+Less than or equal to: <=
+Greater than or equal to: >=
+Is equal to: ===
+Is not equal to: !==
+*/
+let hungerLevel=8;
+if(hungerLevel > 7) {
+  console.log('Time to eat!');
+} else {
+  console.log('We can eat later!');
+}
