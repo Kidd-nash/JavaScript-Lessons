@@ -221,3 +221,6 @@ switch (athleteFinalPosition) {
     console.log('No medal awarded.');
     break;
 }
+//Magic Eight Ball project
+let userName = ('');
+userName === 'Kido' ? console.log('Hello, Kido!') : console.log('Hello!');
