@@ -254,3 +254,4 @@ switch (eightBall) {
     console.log('Signs point to yes');
     break;
 }
+console.log(eightBall);
