@@ -255,3 +255,46 @@ switch (eightBall) {
     break;
 }
 console.log(eightBall);
+/*
+Here’s how our registration works. There are adult runners
+(over 18 years of age) and youth runners (under 18 years of age). They can
+register early or late. Runners are assigned a race number and start time based
+on their age and registration.
+
+Race number:
+
+Early adults receive a race number at or above 1000.
+All others receive a number below 1000.
+Start time:
+
+Adult registrants run at 9:30 am or 11:00 am.
+Early adults run at 9:30 am.
+Late adults run at 11:00 am.
+Youth registrants run at 12:30 pm (regardless of registration).
+But we didn’t plan for runners that are exactly 18! We’ll handle that by the
+end of the project.
+*/
+let raceNumber = Math.floor(Math.random() * 1000);
+var registeredEarly= false;
+var runnersAge= 19;
+
+if (runnersAge >= 18 &&
+registeredEarly)
+{
+  console.log(raceNumber + 1000);
+}
+else
+{
+  console.log('not true');
+}
+
+if (runnersAge > 18 &&
+registeredEarly) {
+  console.log('Race time: 9:30am, number is: ' + raceNumber);
+} else if (runnersAge > 18 && registeredEarly === false) {
+  console.log('Race time: 11:00am, number is: ' + raceNumber);
+} else if (runnersAge < 18) {
+  console.log('Race time: 12:30pm, number is: ' + raceNumber);
+} else {
+  console.log('Please see the registration desk.')
+}
