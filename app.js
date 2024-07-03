@@ -298,3 +298,12 @@ registeredEarly) {
 } else {
   console.log('Please see the registration desk.')
 }
+
+//Functions
+function getReminder() {
+  console.log('Water the plants.');
+}
+
+function greetInSpanish() {
+  console.log('Buenas tardes');
+}
