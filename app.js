@@ -353,3 +353,9 @@ const plantNeedsWater = function(day) {
 plantNeedsWater('Tuesday');
 
 console.log(plantNeedsWater('Tuesday'));
+//Arrow function is when you use "=>" at the closing parenthesis
+//Instead of using "function at the opening parenthesis"
+
+//Concise body arrow Functions
+const plantNeedsWater = day =>
+   day === 'Wednesday' ? true : false;
