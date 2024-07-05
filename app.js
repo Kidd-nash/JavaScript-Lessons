@@ -313,7 +313,8 @@ getReminder();
 greetInSpanish();
 //Parameters and Arguments
 function sayThanks(name) {
-  console.log('Thank you for your purchase '+ name + '! We appreciate your business.');
+  console.log('Thank you for your purchase '+ name +
+  '! We appreciate your business.');
 }
 sayThanks('Cole');
 //Default Parameters
@@ -389,3 +390,20 @@ const logVisibleLightWaves = () => {
 logVisibleLightWaves();
 console.log(lightWaves); //this log will be a reference error, since lightWaves
                          //is not within its Scope
+
+//Scope Polution
+const satellite = 'The Moon';
+const galaxy = 'The Milky Way';
+let stars = 'North Star';
+
+const callMyNightSky = () => {
+  stars = 'Sirius';
+	return 'Night Sky: ' + satellite + ', ' + stars + ', ' + galaxy;
+};
+
+console.log(callMyNightSky());
+console.log(stars);
+/*
+this kind of var sets from outside and inside a function scope is a bad practice
+setting variable with similar names is quite problematic
+*/
