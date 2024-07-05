@@ -407,3 +407,17 @@ console.log(stars);
 this kind of var sets from outside and inside a function scope is a bad practice
 setting variable with similar names is quite problematic
 */
+
+//Good Practice of Scoping
+const logVisibleLightWaves = () => {
+  let lightWaves = 'Moonlight';
+	let region = 'The Arctic';
+  // Add if statement here:
+  if (region === 'The Arctic') {
+    let lightWaves = 'Northern Lights';
+    console.log(lightWaves);
+  }
+  console.log(lightWaves);
+};
+
+logVisibleLightWaves();
