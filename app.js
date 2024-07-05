@@ -379,3 +379,13 @@ const callMyNightSky = () => {
 }
 
 console.log(callMyNightSky());
+//Block Scope
+
+const logVisibleLightWaves = () => {
+  const lightWaves = 'Moonlight';
+  console.log(lightWaves);
+}
+
+logVisibleLightWaves();
+console.log(lightWaves); //this log will be a reference error, since lightWaves
+                         //is not within its Scope
