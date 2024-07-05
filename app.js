@@ -424,10 +424,15 @@ logVisibleLightWaves();
 //Creating an array
 const hobbies = ['', '', ''];
 console.log(hobbies);
-//Accessing elements
-const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];
+//Accessing elements by index, first elemet is always index 0
+const famousSayings = ['Fortune favors the brave.',
+'A joke is a very serious thing.', 'Where there is love there is life.'];
 var listItem = famousSayings[0];
 
 console.log(listItem);
 console.log(famousSayings[2]);
 console.log(famousSayings[3]); //this will log undefined
+//Updating elements
+let groceryList = ['bread', 'tomatoes', 'milk'];
+
+groceryList[1] = 'avocados';
