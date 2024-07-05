@@ -421,3 +421,6 @@ const logVisibleLightWaves = () => {
 };
 
 logVisibleLightWaves();
+//Creating an array
+const hobbies = ['', '', ''];
+console.log(hobbies);
