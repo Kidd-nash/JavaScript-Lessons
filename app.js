@@ -456,7 +456,15 @@ const chores = ['wash dishes', 'do laundry', 'take out trash'];
 chores.push('wipe dust', 'refill water');
 console.log(chores);
 //pop method
-const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
+const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner',
+'mop floor'];
 const removed = chores.pop();
 console.log(chores);
 console.log(removed);
+//More Array Methods
+//shift method
+const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice',
+'pasta', 'coconut oil', 'plantains'];
+
+groceryList.shift('orange juice');
+console.log(groceryList);
