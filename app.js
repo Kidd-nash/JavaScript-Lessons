@@ -462,9 +462,12 @@ const removed = chores.pop();
 console.log(chores);
 console.log(removed);
 //More Array Methods
-//shift method
+//shift and unshift methods
 const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice',
 'pasta', 'coconut oil', 'plantains'];
 
 groceryList.shift('orange juice');
+console.log(groceryList);
+
+groceryList.unshift('popcorn');
 console.log(groceryList);
