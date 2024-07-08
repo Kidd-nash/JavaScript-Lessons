@@ -496,3 +496,7 @@ console.log(concept);
 //Nested arrays
 var numberClusters = [[1, 2], [3, 4], [5, 6]];
 const target = numberClusters[2][1];
+//The For Loop
+for (let counter = 5; counter < 11; counter++) {
+  console.log(counter);
+}
