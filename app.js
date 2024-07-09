@@ -508,3 +508,9 @@ for (let counter = 0; counter < 4; counter++){
 for (let backwardsCounter = 3; backwardsCounter >= 0; backwardsCounter--) {
   console.log(backwardsCounter);
 }
+//Looping through Arrays
+const vacationSpots = ['Bali', 'Paris', 'Tulum'];
+
+for (let i = 0; i <vacationSpots.length; i++){
+  console.log('I would love to visit ' + vacationSpots[i]);
+}
