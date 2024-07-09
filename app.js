@@ -511,6 +511,19 @@ for (let backwardsCounter = 3; backwardsCounter >= 0; backwardsCounter--) {
 //Looping through Arrays
 const vacationSpots = ['Bali', 'Paris', 'Tulum'];
 
-for (let i = 0; i <vacationSpots.length; i++){
+for (let i = 0; i < vacationSpots.length; i++){
   console.log('I would love to visit ' + vacationSpots[i]);
 }
+//Nested Loops
+var bobsFollowers = ['Bab', 'Bib', 'Bub', 'Beb'];
+var tinasFollowers = ['Bub', 'Bob', 'Beb'];
+
+var mutualFollowers = [];
+
+for (let i = 0; i < bobsFollowers.length; i++) {
+  for (let j = 0; j < tinasFollowers.length; j++) {
+    if (bobsFollowers[i] === tinasFollowers[j]) {
+      mutualFollowers.push(bobsFollowers[i]);
+    }
+  }
+};
