@@ -602,3 +602,19 @@ const bigNumbers = [100, 200, 300, 400, 500];
 const smallNumbers = bigNumbers.map(num => num/100);
 
 console.log(smallNumbers)
+//The .filter
+const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+
+const smallNumbers = randomNumbers.filter(
+randomNumber => {
+  return randomNumber < 250;
+}
+);
+
+const favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'];
+
+const longFavoriteWords = favoriteWords.filter( longWords => {
+  return longWords.length > 7;
+}
+
+);
