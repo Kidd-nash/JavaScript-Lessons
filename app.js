@@ -581,3 +581,10 @@ return checkA === checkB ? func(val) : 'inconsistent results';
 console.log();
 
 console.log(checkConsistentOutput(addTwo, 95));
+//Iterators
+//For Each
+const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+fruits.forEach (function(fruits) {
+  console.log('I want to eat a ' + fruits);
+});
