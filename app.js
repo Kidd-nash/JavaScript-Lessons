@@ -567,3 +567,17 @@ const isTwoPlusTwo = checkThatTwoPlusTwoEqualsFourAMillionTimes;
 isTwoPlusTwo();
 
 console.log(isTwoPlusTwo.name);
+//Function as Parameters
+const addTwo = num => {
+  return num + 2;
+}
+
+const checkConsistentOutput = (func, val) => {
+var checkA = val + 2;
+var checkB = func(val);
+return checkA === checkB ? func(val) : 'inconsistent results';
+}
+
+console.log();
+
+console.log(checkConsistentOutput(addTwo, 95));
