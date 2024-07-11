@@ -688,3 +688,15 @@ let fasterShip = { //a fast ship
 };
 //The spaceship object has two properties Fuel Type and color. 'Fuel Type' has
 //quotation marks because it contains a space character.
+
+//Accessing properties in objects
+let spaceship = {
+  homePlanet: 'Earth',
+  color: 'silver',
+  'Fuel Type': 'Turbo Fuel',
+  numCrew: 5,
+  flightPath: ['Venus', 'Mars', 'Saturn']
+};
+
+var crewCount = spaceship.numCrew;
+var planetArray = spaceship.flightPath;
