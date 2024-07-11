@@ -686,3 +686,5 @@ let fasterShip = { //a fast ship
   'Fuel Type': 'Turbo Fuel',
   color: 'silver'
 };
+//The spaceship object has two properties Fuel Type and color. 'Fuel Type' has
+//quotation marks because it contains a space character.
