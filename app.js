@@ -869,12 +869,25 @@ console.log(halley.name); // Print name value to console
 console.log(halley.behavior); // Print behavior value to console
 //constructor method
 class Surgeon {
-  constructor(name, department) {
-    this.name = name;
-    this.department = department;
+//putting and underscore is prepending which is an indicator not to access directly
+  this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
+  }
+  get name() {
+    return this._name;
+  }
+  get department() {
+    return this._department;
+  }
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  //this part is a method to set remainingVacationDays value to a new one deducted by daysOff
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
   }
 }
 //instance
-const surgeonRomero = new Surgeon("Francisco Romero", "Cardiovascular");
-
-const surgeonJackson = new Surgeon ("Ruth Jackson", "Orthopedics");
+const surgeonRomero = new Surgeon('Francisco Romero', 'Cardiovascular');
+const surgeonJackson = new Surgeon('Ruth Jackson', 'Orthopedics');
