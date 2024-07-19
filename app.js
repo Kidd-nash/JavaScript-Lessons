@@ -911,3 +911,14 @@ class HospitalEmployee {
     this._remainingVacationDays -= daysOff;
   }
 }
+//Inheritance III
+class Nurse extends HospitalEmployee {
+  constructor(name, certifications) {
+    //this part is important to sub classes, it used to comply to parent class
+    super(name);
+    this._remainingVacationDays = 20;
+    this._certifications = certifications;
+  }
+}
+//when you insert more than 1 value in a parameter, enclose them in []
+const nurseOlynyk = new Nurse("Olynyk", ['Trauma', 'Pediatrics']);
