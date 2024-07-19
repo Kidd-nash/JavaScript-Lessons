@@ -907,6 +907,9 @@ class HospitalEmployee {
   get remainingVacationDays() {
     return this._remainingVacationDays;
   }
+  static generatePassword() {
+   return Math.floor(Math.random()*10000);
+  }
   takeVacationDays(daysOff) {
     this._remainingVacationDays -= daysOff;
   }
