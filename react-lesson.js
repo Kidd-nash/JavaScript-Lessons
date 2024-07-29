@@ -58,3 +58,20 @@
 // be used to render a JSX expression. This is the “where to place the content” part of React rendering.
 // the last line uses the render() method of root to render the content passed in as an argument. Here we pass an <h1> element, 
 // which displays Hello world. This is the “what content to render” part of React rendering.
+
+//Passing a variable to render
+  import React from 'react';
+  import { createRoot } from 'react-dom/client';
+
+  const container = document.getElementById('app');
+  const root = createRoot(container);
+  // Write code here:
+  let myList = (
+    <ul>
+      <li>List 1</li>
+      <li>List 2</li>
+      <li>List 3</li>
+      <li>List 4</li>
+    </ul>
+  );
+  root.render(myList);
