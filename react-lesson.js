@@ -13,3 +13,10 @@ const myTeam = {
     pointGuard: <li>CP3</li>
   };
   //elements can be inside a variable, object/array, even classes
+  //Attributes in JSX
+  const p1 = <p
+            id="large"
+            >food</p>;
+const p2 = <p
+            id="small"
+            >bar</p>;
