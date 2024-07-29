@@ -6,7 +6,7 @@
 //JSX Elements and their surrounding
   let myArticle = <article></article>;
   const myTeam = {
-    center: <li>Jokix</li>,
+    center: <li>Jokic</li>,
     powerForward: <li>Shaq</li>,
     smallForward: <li>James</li>,
     shootingGuard: <li>Curry</li>,
@@ -22,5 +22,20 @@
       <h1>
         Hello world
       </h1>
+    </div>
+  );
+  //remeber to use proper indentation, not sure why but CC crashes if not in proper indentation
+//JSX Outer Elements
+  //The first opening tag and the final closing tag of a JSX expression must belong to the same JSX element!
+  const blog = (
+    //this div wrapping all other elements is necessary, it is called the outer element
+    <div>
+      <img src="pics/192940u73.jpg" />
+      <h1>
+        Greetings
+      </h1>
+      <article>
+        This is the first sentence. I <strong>literally</strong> end of sentences.
+      </article>
     </div>
   );
