@@ -39,3 +39,22 @@
       </article>
     </div>
   );
+//JSX Rendering
+  import React from 'react';
+  //not sure what dis createRoot does
+  import { createRoot } from 'react-dom/client';
+  //not sure what this gets, nvm this prob gets the div container
+  const container = document.getElementById('app');
+  //this root creates the nesting element to the container
+  const root = createRoot(container);
+  //renders the string from h1?
+  root.render(<h1>Hello world</h1>);
+//Rendring explained - React relies on two things to render: what content to render and where to place the content.
+// This line: const container = document.getElementById('app');
+// Uses the document object which represents our web page.
+// Uses the getElementById() method of document to get the Element object representing the HTML element with the passed in id (app).
+// Stores the element in container.
+// we use createRoot() from the react-dom/client library, which creates a React root from container and stores it in root. root can 
+// be used to render a JSX expression. This is the “where to place the content” part of React rendering.
+// the last line uses the render() method of root to render the content passed in as an argument. Here we pass an <h1> element, 
+// which displays Hello world. This is the “what content to render” part of React rendering.
