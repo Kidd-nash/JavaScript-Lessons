@@ -203,3 +203,11 @@ root.render(myDivTwo);
   
   
   root.render(<ul>{peoplesList}</ul>);
+
+//Create element without jsx
+
+  const greatestDivEver = React.createElement(
+    "div",
+    null,
+    "i am div"
+  );
