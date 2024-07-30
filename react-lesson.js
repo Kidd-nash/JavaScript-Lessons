@@ -85,3 +85,18 @@ const myDivTwo =
   A BIG PHRASE
 </div>;
 root.render(myDivTwo);
+
+//Self Closing Tags
+const profile = (
+  <div>
+    <h1>Deadpool</h1>
+    <img src="images/john.png" />
+    <article>
+      My name is Wade Wilson.
+      <br/>
+      I am the X-Force founder.
+      <br/>
+      I specialize in singing.
+    </article>
+  </div>
+);
