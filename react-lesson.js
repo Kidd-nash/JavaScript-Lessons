@@ -100,3 +100,10 @@ const profile = (
     </article>
   </div>
 );
+
+//JS in JSX in JS
+//curly braces
+root.render(<h1>2 + 3</h1>);
+//will render 2 + 3
+root.render(<h1>{2 + 3}</h1>);
+//will render sum of 2 + 3 
