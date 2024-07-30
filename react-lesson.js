@@ -87,23 +87,32 @@ const myDivTwo =
 root.render(myDivTwo);
 
 //Self Closing Tags
-const profile = (
-  <div>
-    <h1>Deadpool</h1>
-    <img src="images/john.png" />
-    <article>
-      My name is Wade Wilson.
-      <br/>
-      I am the X-Force founder.
-      <br/>
-      I specialize in singing.
-    </article>
-  </div>
-);
+  const profile = (
+    <div>
+      <h1>Deadpool</h1>
+      <img src="images/john.png" />
+      <article>
+        My name is Wade Wilson.
+        <br/>
+        I am the X-Force founder.
+        <br/>
+        I specialize in singing.
+      </article>
+    </div>
+  );
 
 //JS in JSX in JS
-//curly braces
-root.render(<h1>2 + 3</h1>);
-//will render 2 + 3
-root.render(<h1>{2 + 3}</h1>);
-//will render sum of 2 + 3 
+  //curly braces
+  root.render(<h1>2 + 3</h1>);
+  //will render 2 + 3
+  root.render(<h1>{2 + 3}</h1>);
+  //will render sum of 2 + 3 
+
+//More operations
+  const math = (<h1>2 + 3 = {2 + 3}</h1>);
+  root.render(math);
+
+//Variables in JSX
+  const theBestString = 'This text was accessed through a javascript variable';
+  root.render(<h1>{theBestString}</h1>);
+
