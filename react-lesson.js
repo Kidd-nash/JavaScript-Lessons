@@ -161,4 +161,6 @@ root.render(myDivTwo);
   };
   root.render(img);
   // The if statement is on the outside, and no JavaScript injection is necessary.
+//Using ternary
+  const imgs = <img src={pics[coinToss() === 'heads' ? 'kitty' : 'doggy']} />;
 
