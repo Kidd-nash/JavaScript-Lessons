@@ -161,6 +161,34 @@ root.render(myDivTwo);
   };
   root.render(img);
   // The if statement is on the outside, and no JavaScript injection is necessary.
+
 //Using ternary
   const imgs = <img src={pics[coinToss() === 'heads' ? 'kitty' : 'doggy']} />;
 
+//Still Conditionals: &&
+// judgmental will be true half the time.
+  const judgmental = Math.random() < 0.5;
+
+  const favoriteFoods = (
+    <div>
+      <h1>My Favorite Foods</h1>
+      <ul>
+        <li>Sushi Burrito</li>
+        <li>Rhubarb Pie</li>
+        {!judgmental && <li>Nacho Cheez Straight Out The Jar</li>}
+        <li>Broiled Grapefruit</li>
+      </ul>
+    </div>
+  );
+
+  root.render(favoriteFoods);
+//.map in JSX
+  const people = ['Rowe', 'Prevost', 'Gare'];
+
+  const peopleList = people.map((person,i) =>
+    // expression goes here:
+    <li key={i}>{person}</li>
+  );
+
+  // root.render goes here:
+  root.render(<ul>{peopleList}</ul>);
