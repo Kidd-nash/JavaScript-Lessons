@@ -140,3 +140,25 @@ root.render(myDivTwo);
 
   root.render(kitty);
 
+//JSX Conditionals
+// you can not inject an if statement into a JSX expression.
+  function coinToss() {
+    // This function will randomly return either 'heads' or 'tails'.
+    return Math.random() < 0.5 ? 'heads' : 'tails';
+  }
+
+  const pics = {
+    kitty: 'https://content.codecademy.com/courses/React/react_photo-kitty.jpg',
+    doggy: 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg'
+  };
+  let img;
+
+  // if/else statement begins here:
+  if (coinToss() === 'heads') {
+      img = <img src={pics.kitty} />;
+  } else {
+      img = <img src={pics.doggy} />;
+  };
+  root.render(img);
+  // The if statement is on the outside, and no JavaScript injection is necessary.
+
