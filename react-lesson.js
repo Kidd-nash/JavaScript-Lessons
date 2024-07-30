@@ -186,9 +186,20 @@ root.render(myDivTwo);
   const people = ['Rowe', 'Prevost', 'Gare'];
 
   const peopleList = people.map((person,i) =>
-    // expression goes here:
+    
     <li key={i}>{person}</li>
   );
 
-  // root.render goes here:
+  
   root.render(<ul>{peopleList}</ul>);
+//
+
+  const peoples = ['Rowe', 'Prevost', 'Gare'];
+
+  const peoplesList = people.map((person,i) =>
+    
+    <li key={'person_'+ i}>{person}</li>
+  );
+  
+  
+  root.render(<ul>{peoplesList}</ul>);
