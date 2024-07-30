@@ -75,3 +75,13 @@
     </ul>
   );
   root.render(myList);
+// One special thing about a React root’s render() method is that it only updates DOM (Documnet Object Model)
+// elements that have changed.
+// That means that if you render the exact same thing twice in a row, the second render will do nothing
+
+//Class vs className
+const myDivTwo = 
+<div className="big">
+  A BIG PHRASE
+</div>;
+root.render(myDivTwo);
