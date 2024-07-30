@@ -116,3 +116,9 @@ root.render(myDivTwo);
   const theBestString = 'This text was accessed through a javascript variable';
   root.render(<h1>{theBestString}</h1>);
 
+//Variable Attributes
+  const goose = 'https://content.codecademy.com/courses/React/react_photo-goose.jpg';
+  const gooseImg = (<img src={goose}/>);
+  //if the value is not a varialbe simply use quotations
+  root.render(gooseImg);
+
