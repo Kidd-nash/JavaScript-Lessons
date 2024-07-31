@@ -105,3 +105,8 @@ if (!$row['complete']) {
   </table>
 </body>
 </html>
+
+//PHP strings and variables
+//Strings
+  echo "Hello, World!";
+  //echo command then string of the thing that you want to print on screen and do not forget the semi colon at the end
