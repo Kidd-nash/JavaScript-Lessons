@@ -219,6 +219,27 @@ root.render(myDivTwo);
   export default App;
 
 //Import react
-// "import React from 'react';" is a library that contains methods
-/* "import ReactDOM from 'react-dom/client';" is document object model that is used in react but not part of it 
-    it is usully placed in the index.js */
+  // "import React from 'react';" is a library that contains methods
+  /* "import ReactDOM from 'react-dom/client';" is document object model that is used in react but not part of it 
+      it is usully placed in the index.js 
+       - creates another JavaScript object. This object contains methods that help React interact with the DOM, 
+      such as ReactDOM.createRoot(). */
+
+//Create a Function Component
+  //  function component is a function that is exported right after, it is so that it can be accessed to other reacts
+  /*  creating the function name for function component it is a practice to use PascalCase, to distinguish it as a 
+      React JSX function */
+
+//Return Keyword
+  /*  Our instructions can include a combination of markup, CSS, and JavaScript to produce the desired result. 
+      The one thing we must always include is a return statement. */
+
+//Importing and Exporting components
+  //  exporting components after finishing is important for it to be accessed and imported to other files
+  //  importing components if important to use the function component made from another file
+
+//Rendering component
+  //  ReactDOM.createRoot(document.getElementById('app')).render(<MyComponent />); 
+  /*  document.getElementById('app') returns a DOM element from index.html.
+      .createRoot() receives the DOM element as the first argument and creates a root for it.
+      .createRoot() returns a reference to the root container on which you can call methods like .render(). */
