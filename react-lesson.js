@@ -63,8 +63,8 @@
   import React from 'react';
   import { createRoot } from 'react-dom/client';
 
-  const container = document.getElementById('app');
-  const root = createRoot(container);
+  const containers = document.getElementById('app');
+  const roots = createRoot(containers);
   // Write code here:
   let myList = (
     <ul>
@@ -74,7 +74,7 @@
       <li>List 4</li>
     </ul>
   );
-  root.render(myList);
+  roots.render(myList);
 // One special thing about a React root’s render() method is that it only updates DOM (Documnet Object Model)
 // elements that have changed.
 // That means that if you render the exact same thing twice in a row, the second render will do nothing
@@ -211,3 +211,14 @@ root.render(myDivTwo);
     null,
     "i am div"
   );
+//React component
+  //component is a small reusable code
+  function App() {
+    return <h1>Hello again, World!</h1>;
+  }
+  export default App;
+
+//Import react
+// "import React from 'react';" is a library that contains methods
+/* "import ReactDOM from 'react-dom/client';" is document object model that is used in react but not part of it 
+    it is usully placed in the index.js */
