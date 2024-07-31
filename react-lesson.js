@@ -262,4 +262,68 @@ root.render(myDivTwo);
     );
   };
 
-  export default MyQuote; //note that default export can only be done once in a file or component
+  // export default MyQuote; //note that default export can only be done once in a file or component
+
+// Component with attributes
+
+    const redPanda = {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Endangered_Red_Panda.jpg',
+      alt: 'Red Panda',
+      width:  '200px'
+    };
+    
+    function RedPanda(){
+        return (
+          <div>
+            <h1>Cute Red Panda</h1>
+            <img 
+              src={redPanda.src}
+              alt={redPanda.alt}
+              width={redPanda.width} />
+          </div>
+        );
+    }
+//Logic
+  import React from 'react';
+
+  const friends = [
+    {
+      title: "Yummmmmmm",
+      src: "https://content.codecademy.com/courses/React/react_photo-monkeyweirdo.jpg"
+    },
+    {
+      title: "Hey Guys! Wait Up!",
+      src: "https://content.codecademy.com/courses/React/react_photo-earnestfrog.jpg"
+    },
+    {
+      title: "Yikes",
+      src: "https://content.codecademy.com/courses/React/react_photo-alpaca.jpg"
+    }
+  ];
+
+  // New function component starts here:
+  function Friend() {
+    let friend = friends[2];
+    return(
+      <div>
+        <h1>{friend.title}</h1>
+        <img 
+          src={friend.src}/>
+      </div>
+    );
+  }
+
+//Event listener and handler
+  import React from 'react';
+
+  function SubmitButton() {
+    function handleClick() {
+      alert('Submission Successful.');
+    }
+    return <button onClick={handleClick}>Submit</button>;
+  }
+
+  // export default SubmitButton;
+  /* The handleHover() function is passed without the parentheses we would typically see when calling a function. This is 
+  because passing it as handleHover indicates it should only be called once the event has happened. Passing it as handleHover() 
+  would trigger the function immediately, so be careful! */
