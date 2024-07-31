@@ -243,3 +243,23 @@ root.render(myDivTwo);
   /*  document.getElementById('app') returns a DOM element from index.html.
       .createRoot() receives the DOM element as the first argument and creates a root for it.
       .createRoot() returns a reference to the root container on which you can call methods like .render(). */
+
+//Multiline JSX in a Component
+  //  note that a multi line function component needs to have a parenthesis after a return
+  function MyQuote() {
+    return (
+      <blockquote>
+        <p>
+          What is important now is to recover our senses.
+        </p>
+        <cite>
+          <a target="_blank" 
+        href="https://en.wikipedia.org/wiki/Susan_Sontag">
+        Susan Sontag
+          </a>
+        </cite>
+      </blockquote>
+    );
+  };
+
+  export default MyQuote; //note that default export can only be done once in a file or component
