@@ -327,3 +327,26 @@ root.render(myDivTwo);
   /* The handleHover() function is passed without the parentheses we would typically see when calling a function. This is 
   because passing it as handleHover indicates it should only be called once the event has happened. Passing it as handleHover() 
   would trigger the function immediately, so be careful! */
+
+//Props
+// Accessing props from a component
+
+function PropsDisplayer(props) {
+  const stringProps = JSON.stringify(props);
+  return (
+    <div>
+      <h1>CHECK OUT MY PROPS OBJECT</h1>
+      <h2>{stringProps}</h2>
+    </div>
+  );
+}
+
+// export default PropsDisplayer;
+// after importing this and returning it for index you still have to put an attribute
+
+// Pass props to a component
+
+  function App() {
+    return <PropsDisplayer myProp="Hello"/>;
+  }
+// it should look something like this a name(myProp) for the information that you want to pass and its value(Hello)
