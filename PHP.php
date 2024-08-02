@@ -10,7 +10,7 @@
 # and the third
 
 <?php
-echo "I love PHP!";
+echo "I love PHP!";?>
 
 <?php
 require 'vendor/autoload.php';
@@ -106,9 +106,20 @@ if (!$row['complete']) {
 </body>
 </html>
 
-//PHP strings and variables
+<!-- //PHP strings and variables
 //Strings
   echo "Hello, World!";
   //echo command then string of the thing that you want to print on screen and do not forget the semi colon at the end
 //Escape Sequence
   
+// -->
+<?php 
+$snake_case_variable_name = "variables starts with a sigil dollar sign, and followed by name using
+                            /n the standard snake case name";?>
+<?php
+$name = "Kido";
+$language = "PHP Language";
+
+echo "My nickname is " . $name;
+echo "\nA string " . $language;  
+?>                        
