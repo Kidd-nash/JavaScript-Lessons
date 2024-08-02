@@ -446,4 +446,33 @@ function PropsDisplayer(props) {
   // If you are listening for a “hover” event, then you name your event handler handleHover
   // Your prop name should be the word on, plus your event type. If you are listening for a “click” event, then you name 
   // your prop onClick. If you are listening for a “hover” event, then you name your prop onHover
-  
+
+  //props.children
+    //parent
+    function App() {
+      return (
+        <div>
+          <List type='Living Musician'>
+            <li>Sachiko M</li>
+            <li>Harvey Sid Fisher</li>
+          </List>
+          <List type='Living Cat Musician'>
+            <li>Nora the Piano Cat</li>
+            <li>Garfield</li>
+          </List>
+        </div>
+      );
+    }
+    //child
+    function List(props) {
+      let titleText = `Favorite ${props.type}`;
+      if (props.children instanceof Array) {
+        titleText += 's';
+      }
+      return (
+        <div>
+          <h1>{titleText}</h1>
+          <ul>{props.children}</ul>
+        </div>
+      );
+    }
