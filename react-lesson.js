@@ -347,7 +347,16 @@ function PropsDisplayer(props) {
 // Pass props to a component
 
     function App() {
-      return <PropsDisplayer myProp="Hello"/>;
+      return (
+        <div>
+          {/* passing a string */}
+          <PropsDisplayer myProp="Hello"/>
+          {/* passing an array */}
+          <Greeting myInfo={["Astronaut", "Narek", "43"]} />
+          {/* passing different data types */}
+          <Greeting name="The Queen Mary" city="Long Beach, California" age={56} haunted={true} />
+        </div>
+      );
     }
   // it should look something like this a name(myProp) for the information that you want to pass and its value(Hello)
 
@@ -355,6 +364,10 @@ function PropsDisplayer(props) {
 
   function App() {
     return <Product name="Apple" price = {99} rating = "9/10" />;
+  }
+  /* destructuring syntax */
+  function Button({displayText}) {
+    return <button>{displayText}</button>;
   }
   // this function returns the components attributes in order to do that you have to declare props as its parameter
   // check below
@@ -368,3 +381,22 @@ function PropsDisplayer(props) {
     </div>
    );
   }
+
+//Render Different UI Based on props
+  // in this line of code you have two props, one inside a return and the other in a condition base value
+  function Greeting(props) {
+    if (props.signedIn == false) {
+      return <h1>Please login.</h1>;
+    } else {
+      return (
+        <>
+          <h1>Welcome back, {props.name}!</h1>
+          <article>
+            Latest Movie: A Computer Bug's Life
+          </article>
+        </>
+      )
+    }
+  }
+
+  // export default Greeting;
