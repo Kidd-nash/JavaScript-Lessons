@@ -400,3 +400,50 @@ function PropsDisplayer(props) {
   }
 
   // export default Greeting;
+
+//6-8
+  //function talker is the parent component to the button
+    function Talker() {
+      //when you need a function inside a function just write it as is but inside and before the return
+      function talk() {
+        let speech = '';
+        for (let i = 0; i < 10000; i++) {
+          speech += 'blah ';
+        }
+        alert(speech);
+      }
+      //return the function by setting an attribute and passing the function inside as its value
+      this 
+      return <Button talk={talk}/>;
+    }
+  //example function is the child component that handles the alert of handleEvent
+    function Example() {
+      function handleEvent() {
+        alert(`I am an event handler.
+          If you see this message,
+          then I have been called.`);
+      }
+      return (
+          <h1 onClick={handleEvent}>
+            Hello world
+          </h1>
+        );
+    }
+  //another child component for the button
+    function Button() {
+      return (
+        //remember in order to have an event on an element you have give it an attribute and set its value to the 
+        //event or function that you want it to do
+        <button onClick={props.talk}>
+          Click me!
+        </button>
+      );
+    }
+  // These two names can be whatever we want. However, there is a naming convention that is commonly used.
+  // Here’s how the naming convention works: first, think about what type of event you are listening for. 
+  // In our example, the event type was “click”. If you are listening for a “click” event, then you name your event handler 
+  // handleClick. 
+  // If you are listening for a “hover” event, then you name your event handler handleHover
+  // Your prop name should be the word on, plus your event type. If you are listening for a “click” event, then you name 
+  // your prop onClick. If you are listening for a “hover” event, then you name your prop onHover
+  
