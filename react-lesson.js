@@ -346,7 +346,25 @@ function PropsDisplayer(props) {
 
 // Pass props to a component
 
+    function App() {
+      return <PropsDisplayer myProp="Hello"/>;
+    }
+  // it should look something like this a name(myProp) for the information that you want to pass and its value(Hello)
+
+// Render a components Props
+
   function App() {
-    return <PropsDisplayer myProp="Hello"/>;
+    return <Product name="Apple" price = {99} rating = "9/10" />;
   }
-// it should look something like this a name(myProp) for the information that you want to pass and its value(Hello)
+  // this function returns the components attributes in order to do that you have to declare props as its parameter
+  // check below
+  function Product(props) {
+   return (
+    <div>
+        <p>{props.name}</p>
+        {/* for each p element we insert the props parameter and the given name attributes (names can be set to any) */}
+        <p>{props.price}</p>
+        <p>{props.rating}</p>
+    </div>
+   );
+  }
