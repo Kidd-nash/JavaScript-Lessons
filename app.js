@@ -960,3 +960,18 @@ console.log(nurseOlynyk.certifications);
   }
 
   robot.checkEnergy();
+
+//Privacy
+
+  const robotThree = {
+    _energyLevel: 100,
+    recharge(){
+      this._energyLevel += 30;
+      console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`)
+    }
+  };
+
+  robot._energyLevel = 'sustainable ';
+  robot.recharge();
+
+
