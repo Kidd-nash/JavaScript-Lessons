@@ -28,7 +28,7 @@ console.log(Math.ceil(43.8));
 console.log(Number.isInteger(2017));
 //next is creating variables
 var bestGundam = 'GundamWing';
-console.log(bestGundam):
+console.log(bestGundam);
 //pb
 var numOfGundamWings = 2;
 console.log(numOfGundamWings);
@@ -358,7 +358,7 @@ console.log(plantNeedsWater('Tuesday'));
 //Instead of using "function at the opening parenthesis"
 
 //Concise body arrow Functions
-const plantNeedsWater = day =>
+const plantNeedsWatering = day =>
    day === 'Wednesday' ? true : false;
 
 //Blocks and Scope
@@ -382,7 +382,7 @@ const callMyNightSky = () => {
 console.log(callMyNightSky());
 //Block Scope
 
-const logVisibleLightWaves = () => {
+const logVisibleLightWave = () => {
   const lightWaves = 'Moonlight';
   console.log(lightWaves);
 }
@@ -396,7 +396,7 @@ const satellite = 'The Moon';
 const galaxy = 'The Milky Way';
 let stars = 'North Star';
 
-const callMyNightSky = () => {
+const callMyNightSkies = () => {
   stars = 'Sirius';
 	return 'Night Sky: ' + satellite + ', ' + stars + ', ' + galaxy;
 };
@@ -456,7 +456,7 @@ const chores = ['wash dishes', 'do laundry', 'take out trash'];
 chores.push('wipe dust', 'refill water');
 console.log(chores);
 //pop method
-const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner',
+const houseChores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner',
 'mop floor'];
 const removed = chores.pop();
 console.log(chores);
@@ -605,7 +605,7 @@ console.log(smallNumbers)
 //The .filter
 const randomNumbers = [375, 200, 3.14, 7, 13, 852];
 
-const smallNumbers = randomNumbers.filter(
+const small_Numbers = randomNumbers.filter(
 randomNumber => {
   return randomNumber < 250;
 }
@@ -619,7 +619,7 @@ const longFavoriteWords = favoriteWords.filter( longWords => {
 
 );
 //findIndex
-const animals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+const lotOfAnimals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
 
 const foundAnimal = animals.findIndex(animal => {
   return animal === 'elephant';
@@ -690,7 +690,7 @@ let fasterShip = { //a fast ship
 //quotation marks because it contains a space character.
 
 //Accessing properties in objects
-let spaceship = {
+let spaceshipOne = {
   homePlanet: 'Earth',
   color: 'silver',
   'Fuel Type': 'Turbo Fuel',
@@ -701,7 +701,7 @@ let spaceship = {
 var crewCount = spaceship.numCrew;
 var planetArray = spaceship.flightPath;
 //Bracket notation
-let spaceship = {
+let spaceshipTwo = {
   'Fuel Type' : 'Turbo Fuel',
   'Active Mission' : true,
   homePlanet : 'Earth',
@@ -714,7 +714,7 @@ var isActive = spaceship['Active Mission'];
 
 console.log(spaceship[propName]);
 //Property assignment
-let spaceship = {
+let spaceshipThree = {
   'Fuel Type' : 'Turbo Fuel',
   homePlanet : 'Earth',
   color: 'silver',
@@ -861,33 +861,33 @@ class Dog {
     this._behavior ++;
   }
 }
-const halley = new Dog('Halley');
+const halleys = new Dog('Halley');
 console.log(halley.name); // Print name value to console
 console.log(halley.behavior); // Print behavior value to console
 halley.incrementBehavior(); // Add one to behavior
 console.log(halley.name); // Print name value to console
 console.log(halley.behavior); // Print behavior value to console
 //constructor method
-class Surgeon {
-//putting and underscore is prepending which is an indicator not to access directly
-  this._name = name;
-    this._department = department;
-    this._remainingVacationDays = 20;
-  }
-  get name() {
-    return this._name;
-  }
-  get department() {
-    return this._department;
-  }
-  get remainingVacationDays() {
-    return this._remainingVacationDays;
-  }
-  //this part is a method to set remainingVacationDays value to a new one deducted by daysOff
-  takeVacationDays(daysOff) {
-    this._remainingVacationDays -= daysOff;
-  }
-}
+// class Surgeon {
+// //putting and underscore is prepending which is an indicator not to access directly
+//   this._name = name;
+//     this._department = department;
+//     this._remainingVacationDays = 20;
+//   }
+//   get name() {
+//     return this._name;
+//   }
+//   get department() {
+//     return this._department;
+//   }
+//   get remainingVacationDays() {
+//     return this._remainingVacationDays;
+//   }
+//   //this part is a method to set remainingVacationDays value to a new one deducted by daysOff
+//   takeVacationDays(daysOff) {
+//     this._remainingVacationDays -= daysOff;
+//   }
+// }
 //instance
 const surgeonRomero = new Surgeon('Francisco Romero', 'Cardiovascular');
 const surgeonJackson = new Surgeon('Ruth Jackson', 'Orthopedics');
