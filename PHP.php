@@ -160,5 +160,212 @@ echo "\nA string " . $language;
   Integer and Floating type, integers being the positive and negative whole numbers
   floating being the decimal and fraction/ratio numbers.  -->
   
+<!-- PHP Functions -->
 
- 
+<?php 
+
+function inflateEgo()
+{
+  echo "a compliment.\n";
+}
+
+inflateEgo();
+
+function printStringReturnNumber()
+{
+  echo "a string\n";
+  return 23;
+}
+
+$my_num = printStringReturnNumber();
+
+echo $my_num;
+
+function notFound()
+{
+  echo "ERROR: Page not found!\n";
+  return 404;
+}
+
+function greetLearner()
+{
+  echo "Hello, Learner!\n";
+  echo "I hope you're (still) enjoying PHP!\n";
+  echo "Love, Codecademy\n";
+  return "<3";
+}
+
+// Don't change the code below:
+
+$error = notFound(); 
+$heart = greetLearner();
+
+echo "I received a $error, but it's ok because I also received $heart.";
+
+//Associative Arrays
+
+$php_array = array(
+  "language" => "PHP", 
+  "creator" => "Rasmus Lerdorf", 
+  "year_created" => 1995, 
+  "filename_extensions" => [".php", ".phtml", ".php3", ".php4", ".php5", ".php7", ".phps", ".php-s", ".pht", ".phar"]
+);
+
+$php_short = [
+  "language" => "PHP", 
+  "creator" => "Rasmus Lerdorf", 
+  "year_created" => 1995, 
+  "filename_extensions" => [".php", ".phtml", ".php3", ".php4", ".php5", ".php7", ".phps", ".php-s", ".pht", ".phar"]
+];
+
+//Printing Associative Arrays
+
+$september_hits = ["The Sixth Sense" => 22896967,
+"Stigmata" => 18309666,
+"Blue Streak" => 19208806,
+"Double Jeopardy" => 23162542];
+
+echo implode(", ", $september_hits);
+
+print_r($september_hits);
+
+//Adding and Accessing Elements
+
+$assignment_one = ["Alex"=> 87, "Kenny"=> 91, "Natalia"=> 91, "Lily"=> 67, "Dan"=> 81, "Kat"=> 77, "Sara" => 65];
+
+$assignment_two = ["Alex"=> 91, "Kenny"=> 99, "Natalia"=> 100, "Lily"=> 61, "Dan"=> 88, "Kat"=> 90];
+
+$assignment_three = ["Alex"=> 78, "Kenny"=> 92, "Natalia"=> 94, "Lily"=> 79, "Dan"=> 73, "Sara" => 61];
+
+$student_name = "Alex";
+
+$assignment_two["Sara"] = 65;
+$assignment_three["Kat"] = 97;
+
+$dans_grades = [$assignment_one["Dan"], $assignment_two["Dan"], $assignment_three["Dan"]];
+
+echo $assignment_two[$student_name];
+
+//Changing and removing elements
+
+$my_car = [
+  "oil" => "black and clumpy",
+  "brakes" => "new",
+  "tires" => "old with worn treads",
+  "filth" => "bird droppings", 
+  "wiper fluid" => "full", 
+  "headlights" => "bright"
+];
+print_r($my_car);
+
+$my_car["oil"] = "new and premium";
+
+$my_car["tires"] = "new with deep treads";
+
+
+unset ($my_car["filth"]);
+
+print_r($my_car);
+
+//Numerical Keys
+
+$hybrid_array = ["cat", "dog", 9, 18.2];
+
+$hybrid_array[8] = "five more";
+
+print_r($hybrid_array);
+
+array_push($hybrid_array, rand());
+
+echo $hybrid_array[9];
+
+//Joining Arrays
+
+$giraffe_foods = ["dip"=>"guacamole", "chips"=>"corn", "entree"=>"grilled chicken"];
+
+$impala_foods = ["dessert"=>"cookies", "vegetable"=>"asparagus", "side"=>"mashed potatoes"];
+
+$rat_foods = ["dip"=>"mashed earth worms", "entree"=>"trash pizza", "dessert"=>"sugar cubes", "drink"=>"lemon water"];
+
+$potluck = $giraffe_foods + $impala_foods;
+
+print_r($potluck);
+
+$rat_impala = $rat_foods + $impala_foods;
+
+print_r($rat_impala);
+
+$everybody =  $giraffe_foods + $impala_foods + $rat_foods;
+
+print_r($everybody);
+
+//Assign by Value/Reference
+
+$doge_meme = ["top_text" => "Such Python", "bottom_text" => "Very language. Wow.", "img" => "very-cute-dog.jpg", "description" => "An adorable doge looks confused."];
+
+$bad_meme = ["top_text" => "i don't know", "bottom_text" => "i can't think of anything", "img" => "very-fat-cat.jpg", "description" => "A very fat cat looks happy."];
+
+
+function createMeme ($meme) 
+{
+  $meme["top_text"] = "Much PHP";
+  $meme["bottom_text"] = "Very programming. Wow.";
+  return $meme;
+}  
+
+print_r($doge_meme);
+
+$php_doge = createMeme($doge_meme);
+
+print_r($php_doge);
+
+function fixMeme (&$meme) 
+{
+  $meme["top_text"] = "I can haz";
+  $meme["bottom_text"] = "PHP, plz?";
+  return $meme;
+} 
+
+print_r($bad_meme);
+
+fixMeme ($bad_meme);
+
+print_r($bad_meme);
+
+//While
+
+$count = 1;
+while ($count <= 100)
+{
+  if ($count % 33 === 0) {
+    echo $count . " is divisible by 33\n";
+  }
+  $count += 1;
+}
+
+//do while
+
+$plant_height = 22;
+do  {
+  echo "The plant is $plant_height tall.\n";
+  if ($plant_height >= 30) {
+    echo "And can produce fruit.\n";
+  }
+  $plant_height ++;
+} while ($plant_height < 31);
+
+//For 
+
+for ($i = 10; $i >= 0; $i--) {
+  if ($i === 2) {
+    echo "Ready!\n";
+  } elseif ($i === 1) {
+    echo "Set!\n";
+  } elseif ($i === 0) {
+    echo "Go!\n";
+  } else {
+    echo $i . "\n";
+  }
+}
+
+?>
