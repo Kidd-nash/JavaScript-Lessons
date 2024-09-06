@@ -476,3 +476,82 @@ function PropsDisplayer(props) {
         </div>
       );
     }
+
+//React Hooks
+//built-in hooks [useState(), useEffect(), useContext(), useReducer(), useRef()]
+
+// Update Function Component State, State Hook - useState()
+
+//Initialize State
+
+//Use State Setter Outside of JSX
+
+// React Programming Patterns
+
+// Create Container Component - it is in charge of maintaining the state (createing and updating) 
+
+// Create Presentational Component - its job is to contain JSX. It should be exported and not render itself, it should
+// get rendered by container component
+
+//Parent/Child and Sibling/Sibling Communication
+
+// function Container() {
+//   const [isActive, setIsActive] = useState(false);                              
+                                
+//   return (
+//     <>
+//       <Presentational active={isActive} toggle={setIsActive}/>
+//       <OtherPresentational active={isActive}/>
+//     </>
+//     );                          
+//   }
+                        
+// function Presentational(props) {
+//   return (
+//     <h1>Engines are {props.active}</h1>
+//     <button onClick={() => props.toggle(!props.active)}>Engine Toggle</button>
+//   );
+// }
+                            
+// function OtherPresentational(props) {
+//   // render...
+// }
+
+// In the example above, Container maintains the isActive state and passes setIsActive to Presentational through the toggle 
+// prop. When Presentational needs to communicate a change to the active prop, it uses the function passed to it through the 
+// toggle prop.
+
+// Using this pattern also indirectly results in communication between sibling components (components with a common parent), 
+// as shown in the example above. When Presentational communicates a change through toggle, it causes a state update in 
+// Container, which provides the updated value for isActive to both Presentational and OtherPresentational through the active 
+// prop.
+
+// Render Presentational Components in Container Component
+
+
+//  React Syles
+
+// The container component should now render the presentational components instead of rendering JSX. The container 
+// component’s state will be passed down as props to the presentation components to keep them reactive.
+
+// Inline Styles and Style Object Variables
+
+//Inline Syle
+<h1 style={{ color: 'red' }}>Hello world</h1>
+// Notice that it has double curly braces. The outer curly braces are to note that everything between should be read as 
+// JavaScript. The inner curly braces create a JavaScript object literal.
+
+//Object Syle Variables
+const darkMode = {
+  color: 'white',
+  background: 'black'
+};
+//Injecting it
+<h1 style={darkMode}>Hello world</h1>
+
+//Syle Syntax
+
+// An uncontrolled component is a component that maintains its own internal state. A controlled component is a component that 
+// does not maintain any internal state. Since a controlled component has no state, it must be controlled by someone else.
+
+//Unit Testing with Jest
