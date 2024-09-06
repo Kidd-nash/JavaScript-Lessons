@@ -1048,3 +1048,22 @@ console.log(nurseOlynyk.certifications);
   console.log(newRobot.model)
   console.log(newRobot.mobile)
 
+//Destructured Assignment
+
+  const robotSix = {
+    model: '1E78V2',
+    energyLevel: 100,
+    functionality: {
+      beep() {
+        console.log('Beep Boop');
+      },
+      fireLaser() {
+        console.log('Pew Pew');
+      },
+    }
+  };
+
+  const { functionality } = robot;
+
+  functionality.beep();
+
