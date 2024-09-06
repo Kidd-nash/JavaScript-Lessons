@@ -936,3 +936,27 @@ console.log(nurseOlynyk.remainingVacationDays);
 nurseOlynyk.addCertification("Genetics");
 console.log(nurseOlynyk.certifications);
 //
+//Advanced Objects
+
+//"This" Keyword
+
+  const robot = {
+    model: '1E78V2',
+    energyLevel: 100,
+    provideInfo() { 
+      return `I am ${this.model} and my current energy level is ${this.energyLevel}.`
+    }
+  };
+
+  console.log(robot.provideInfo());
+
+//Arrow function and this
+
+  const robotTwo = {
+    energyLevel: 100,
+    checkEnergy() {
+      console.log(`Energy is currently at ${this.energyLevel}%.`)
+    }
+  }
+
+  robot.checkEnergy();
