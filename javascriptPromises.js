@@ -92,3 +92,25 @@
     .catch((errorMessage) => {
     console.log(errorMessage);
     });
+
+//Avoiding Common Mistakes
+
+    const {checkInventory, processPayment, shipOrder} = require('./library.js');
+
+    const orderFour = {
+    items: [['sunglasses', 1], ['bags', 2]],
+    giftcardBalance: 79.82
+    };
+
+    // Refactor the code below:
+
+    checkInventory(orderFour)
+    .then((resolvedValueArray) => {
+    return processPayment(resolvedValueArray);
+    })
+    .then((resolvedValueArray) => {
+    return shipOrder(resolvedValueArray);
+    })
+    .then((successMessage) => {
+    console.log(successMessage);
+    });
