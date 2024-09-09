@@ -51,3 +51,21 @@
 
     checkInventory(order)
     .then(handleSuccess, handleFailure);
+
+//Using catch() in Promises
+
+    const {checkInventory} = require('./library.js');
+
+    const orderTwo = [['sunglasses', 1], ['bags', 2]];
+
+    const handleSuccessTwo = (resolvedValue) => {
+    console.log(resolvedValue);
+    };
+
+    const handleFailureTwo = (rejectReason) => {
+    console.log(rejectReason);
+    };
+
+    checkInventory(order)
+        .then(handleSuccessTwo)
+        .catch(handleFailureTwo);
