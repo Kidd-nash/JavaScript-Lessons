@@ -58,3 +58,20 @@
     submit.addEventListener('click', displaySuggestions);
 
 
+// fetch POST
+
+fetch('http://api-to-call.com/endpoint' , {          //
+    method: 'POST',                                  //send request
+    body: JSON.stringify({id: '200'})                //
+}).then(response => {
+    if (response.ok) {
+        return response.json();                      // converts response
+    }                                                //object to JSON
+
+    throw new Error('Request failed!');              //
+}, networkError => console.log(newtworkError.message)//handles errors
+
+).then(jsonResponse => {                             //
+    // Code to execute with jsonResponse             //handles success
+});
+
