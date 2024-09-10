@@ -60,18 +60,56 @@
 
 // fetch POST
 
-fetch('http://api-to-call.com/endpoint' , {          //
-    method: 'POST',                                  //send request
-    body: JSON.stringify({id: '200'})                //
-}).then(response => {
-    if (response.ok) {
-        return response.json();                      // converts response
-    }                                                //object to JSON
+    fetch('http://api-to-call.com/endpoint' , {          //
+        method: 'POST',                                  //send request
+        body: JSON.stringify({id: '200'})                //
+    }).then(response => {
+        if (response.ok) {
+            return response.json();                      // converts response
+        }                                                //object to JSON
 
-    throw new Error('Request failed!');              //
-}, networkError => console.log(newtworkError.message)//handles errors
+        throw new Error('Request failed!');              //
+    }, networkError => console.log(newtworkError.message)//handles errors
 
-).then(jsonResponse => {                             //
-    // Code to execute with jsonResponse             //handles success
-});
+    ).then(jsonResponse => {                             //
+        // Code to execute with jsonResponse             //handles success
+    });
+
+
+//Making a POST Request
+
+    // Information to reach API
+    const apiKey = '<Your API Key>';
+    const urlTwo = 'https://api.rebrandly.com/v1/links';
+
+    // Some page elements
+    const inputFieldTwo = document.querySelector('#input');
+    const shortenButton = document.querySelector('#shorten');
+    const responseFieldTwo = document.querySelector('#responseField');
+
+    // Asynchronous functions
+    const shortenUrl = () => {
+    const urlToShorten = inputFieldTwo.value;
+    const data = JSON.stringify({destination: urlToShorten});
+    
+        fetch(urlTwo, {
+        method: 'POST',
+        headers: {
+        'Content-type': 'application/json',
+        'apikey': apiKey
+        },
+        body: data
+    })
+    }
+
+    // Clear page and call AJAX functions
+    const displayShortUrl = (event) => {
+    event.preventDefault();
+    while(responseFieldTwo.firstChild){
+        responseFieldTwo.removeChild(responseFieldTwo.firstChild);
+    }
+    shortenUrl();
+    }
+
+    shortenButton.addEventListener('click', displayShortUrl);
 
