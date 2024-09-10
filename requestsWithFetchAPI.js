@@ -40,6 +40,9 @@
         throw new Error('Request failed!');
     }, networkError => {
         console.log(networkError.message)
+    }).then(jsonResponse => {                                       //Handling a GET Request ---------->
+        // renderRawResponse(jsonResponse);                         //
+        renderResponse(jsonResponse);                               // ---------->
     })
     }
 
@@ -53,3 +56,5 @@
     };
 
     submit.addEventListener('click', displaySuggestions);
+
+
