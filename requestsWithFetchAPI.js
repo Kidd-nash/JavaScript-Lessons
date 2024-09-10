@@ -189,29 +189,76 @@
 
 // async await POST
 
-const getDataPost = async () => {
+    const getDataPost = async () => {
 
-    try {
+        try {
 
-        const response = await fetch('httmps://api-to-call.con/endpoint', {
+            const response = await fetch('httmps://api-to-call.con/endpoint', {
 
-            method: 'POST',
+                method: 'POST',
 
-            body: JSON.stringify({id : 200})
-        }) 
+                body: JSON.stringify({id : 200})
+            }) 
 
-        if(response.ok) {
+            if(response.ok) {
 
-            const jsonResponse = await response.json();
+                const jsonResponse = await response.json();
 
-            // Code to execute with jsonResponse
+                // Code to execute with jsonResponse
 
+            }
+
+            throw new Error('Request failed!');
+
+        }   catch(error) {
+            console.log(error);
         }
-
-        throw new Error('Request failed!');
-
-    }   catch(error) {
-        console.log(error);
     }
+
+
+//Making an async POST Request
+
+
+// information to reach API
+const apiKeyTwo = '<Your API Key>';
+const urlFour = 'https://api.rebrandly.com/v1/links';
+
+// Some page elements
+const inputFieldFour = document.querySelector('#input');
+const shortenButtonFour = document.querySelector('#shorten');
+const responseFieldFour = document.querySelector('#responseField');
+
+// Asynchronous functions
+// Code goes here
+const shortenUrlTwo = async () => {
+	const urlToShorten = inputFieldFour.value;
+  const data = JSON.stringify({destination: urlToShorten});
+  try {
+    const response = await fetch(urlFour, {
+			method: 'POST',
+      body: data,
+      headers: {
+        'Content-type': 'application/json',
+				'apikey': apiKeyTwo
+      }
+    });
+		if(response.ok){
+      const jsonResponse = await response.json();
+      renderResponse(jsonResponse);
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
+
+// Clear page and call Asynchronous functions
+const displayShortUrlTwo = (event) => {
+  event.preventDefault();
+  while(responseFieldFour.firstChild){
+    responseFieldFour.removeChild(responseFieldFour.firstChild);
+  }
+  shortenUrl();
+}
+
+shortenButtonFour.addEventListener('click', displayShortUrl);
 
