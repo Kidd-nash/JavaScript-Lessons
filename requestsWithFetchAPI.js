@@ -186,3 +186,32 @@
 
     submitThree.addEventListener('click', displaySuggestions);
 
+
+// async await POST
+
+const getDataPost = async () => {
+
+    try {
+
+        const response = await fetch('httmps://api-to-call.con/endpoint', {
+
+            method: 'POST',
+
+            body: JSON.stringify({id : 200})
+        }) 
+
+        if(response.ok) {
+
+            const jsonResponse = await response.json();
+
+            // Code to execute with jsonResponse
+
+        }
+
+        throw new Error('Request failed!');
+
+    }   catch(error) {
+        console.log(error);
+    }
+}
+
