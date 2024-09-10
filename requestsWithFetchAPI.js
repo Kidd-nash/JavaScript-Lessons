@@ -99,6 +99,15 @@
         'apikey': apiKey
         },
         body: data
+        }).then(response => {                           //Handling a POST Request
+            if (response.ok) {
+            return response.json();
+            }
+            throw new Error('Request failed!');
+        }, networkError => {
+            console.log(networkError.message);
+        }).then(jsonResponse => {
+            renderResponse(jsonResponse);               //Handling a POST Request
     })
     }
 
