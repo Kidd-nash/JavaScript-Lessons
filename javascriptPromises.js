@@ -66,7 +66,7 @@
     console.log(rejectReason);
     };
 
-    checkInventory(order)
+    checkInventory(orderTwo)
         .then(handleSuccessTwo)
         .catch(handleFailureTwo);
 
