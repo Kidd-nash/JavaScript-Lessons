@@ -122,3 +122,28 @@
 
     shortenButton.addEventListener('click', displayShortUrl);
 
+
+// async await GET
+
+    const getData = async () => {
+
+        try {
+
+            const response = await fetch ('httmpls://apit-to-call.con/endpoint');
+
+            if (response.ok) {
+
+                const jsonReponse = await response.json();
+
+                //Code to execute with jsonResponse
+            }
+
+            throw new Error('Request failed!');
+
+        } catch (error) {
+            
+            console.log(error);
+        }
+        
+    }
+
