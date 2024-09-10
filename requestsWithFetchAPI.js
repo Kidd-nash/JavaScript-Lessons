@@ -147,3 +147,42 @@
         
     }
 
+
+// Making an async GET Request
+
+    // Information to reach API
+    const urlThree = 'https://api.datamuse.com/words?';
+    const queryParams = 'rel_jja=';
+
+    // Selecting page elements
+    const inputFieldThree = document.querySelector('#input');
+    const submitThree = document.querySelector('#submit');
+    const responseFieldThree = document.querySelector('#responseField');
+
+    // Asynchronous function
+    // Code goes here
+    const getSuggestionsThree = async () => {
+    const wordQuery = inputFieldThree.value;
+    const endpoint = `${urlThree}${queryParams}${wordQuery}`;
+    try {
+        const response = await fetch(endpoint, {cache: 'no-cache'});
+        if(response.ok){
+        const jsonResponse = await response.json();
+        renderResponse(jsonResponse);
+        }
+    } catch (error) {
+        console.log(error);
+    }
+    }
+
+    // Clear previous results and display results to webpage
+    const displaySuggestionsThree = (event) => {
+    event.preventDefault();
+    while(responseFieldThree.firstChild){
+        responseFieldThree.removeChild(responseFieldThree.firstChild);
+    }
+    getSuggestions();
+    }
+
+    submitThree.addEventListener('click', displaySuggestions);
+
